@@ -1,0 +1,23 @@
+/node_modules
+/coverage
+dist/scripts/bundle.js
+dist/scripts/bundle.min.js
+dist/css/bundle.css
+dist/css/bundle.min.css
+dist/index.html
+styles/main.css
+
+# IntelliJ
+*.iml
+/.idea
+/.DS_Store
+npm-debug.log
+/.sass-cache/0bb1239c34ed817361ebe3789ae9a363fa1eaf55/*.scssc
+/.sass-cache/3c07aecb5bd52847d78518bffad41b490f119f77/*.scssc
+/.sass-cache/3d4f43e96cb2d7ee00399b26854bbc42e8a48137/*.scssc
+/.sass-cache/855a028e9e7a30f2e3b398c59b678f253648ee4c/*.scssc
+/.sass-cache/94c4b633e8c3758f5dfbd50640f850cf82b22bc4/*.scssc
+/.sass-cache/a57e41408bc7f08f7dbe3932e12add06ba4d1b1e/*.scssc
+/.sass-cache/c5240804ba3ead6b3ade28e533f50b1899440561/*.scssc
+/.sass-cache/d771580ee89bcbe5750fbe953835e53c992b0fad/*.scssc
+/.sass-cache/fbf5cfa1da89346ba4ffc32df8e6d34f734b903c/*.scssc

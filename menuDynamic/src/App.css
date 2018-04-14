@@ -1,0 +1,56 @@
+body{
+  padding: 50px;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuDyn .sub{
+  position: absolute;
+  top: 0;
+  width: 140px;
+  display: none;
+}
+
+.menuDyn li a{
+  padding: 10px 30px 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  background: #3a85c9;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.menuDyn li a:hover,
+.menuDyn li a.active{
+  display: block;
+  background: #2d6ba0;
+}
+
+
+.menuDyn > li{
+  max-width: 170px;
+  position: relative;
+}
+
+.menuDyn > li.hasSub a:after{
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  display: block;
+  width: 7px;
+  height: 11px;
+  background-image: url('right-ico.svg');
+  background-size: cover;
+}
+
+.menuDyn > li .sub{
+  right: -140px;
+}
