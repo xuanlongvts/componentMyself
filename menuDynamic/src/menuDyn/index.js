@@ -60,7 +60,6 @@ class menuRender extends Component{
     }
 
     renderItem(key, href, target, callBack, name, isSub) {
-
         let link; let sub = [];
         let liClassName = '';
         isSub ? (liClassName += 'hasSub') : liClassName;
@@ -85,12 +84,14 @@ class menuRender extends Component{
     menuDyn(data){
         let menuNew = [];
         for (let key in data) {
-            if (data[key].hasOwnProperty('sub')) {
-                menuNew.push(this.renderItem(key, data[key].href, data[key].target, data[key].callBack, data[key].name, data[key].sub));
-                this.menuDyn(data[key].sub);
-            }
-            else {
-                menuNew.push(this.renderItem(key, data[key].href, data[key].target, data[key].callBack, data[key].name, false));
+            if (data[key].permission) {
+                if (data[key].hasOwnProperty('sub')) {
+                    menuNew.push(this.renderItem(key, data[key].href, data[key].target, data[key].callBack, data[key].name, data[key].sub));
+                    this.menuDyn(data[key].sub);
+                }
+                else {
+                    menuNew.push(this.renderItem(key, data[key].href, data[key].target, data[key].callBack, data[key].name, false));
+                }   
             }
         }
         return menuNew;

@@ -1,5 +1,5 @@
 body{
-  padding: 700px 50px 50px 50px;
+  padding: 200px 50px 50px 50px;
 }
 
 @-webkit-keyframes fadeInLeft {
@@ -73,6 +73,16 @@ ul{
   top: 0;
   width: 140px;
   display: none;
+  -webkit-animation-name: fadeInLeft;
+	-moz-animation-name: fadeInLeft;
+	-ms-animation-name: fadeInLeft;
+	-o-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+	-webkit-animation-duration: .5s;
+	-moz-animation-duration: .5s;
+	-ms-animation-duration: .5s;
+	-o-animation-duration: .5s;
+	animation-duration: .5s;
 }
 
 .menuDyn li a{
@@ -87,9 +97,8 @@ ul{
   text-transform: capitalize;
 }
 
-.menuDyn li a:hover,
-.menuDyn li a.active{
-  display: block;
+.menuDyn li:hover > a,
+.menuDyn li.active > a{
   background: #2d6ba0;
 }
 
@@ -119,15 +128,4 @@ ul{
 
 .menuDyn li.active > .sub{
   display: block;
-
-  -webkit-animation-name: fadeInLeft;
-	-moz-animation-name: fadeInLeft;
-	-ms-animation-name: fadeInLeft;
-	-o-animation-name: fadeInLeft;
-	animation-name: fadeInLeft;
-	-webkit-animation-duration: .5s;
-	-moz-animation-duration: .5s;
-	-ms-animation-duration: .5s;
-	-o-animation-duration: .5s;
-	animation-duration: .5s;
 }
