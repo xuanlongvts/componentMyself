@@ -11,21 +11,21 @@ export const menuConfig = {
             organisation1: {
                 permission: true,
                 name: 'organisation1',
-                href: "javascript:;",
+                href: "/organisation",
                 target: null,
                 callBack: (data={}) => {}
             },
             organisation2: {
-                permission: false,
+                permission: true,
                 name: 'organisation2',
-                href: "javascript:;",
+                href: "/organisation2",
                 target: null,
                 callBack: (data={}) => {}
             }
         }
     },
     roster: {
-        permission: false,
+        permission: true,
         name: 'roster',
         href: "javascript:;",
         target: null,
@@ -37,7 +37,7 @@ export const menuConfig = {
                 name: 'roster1',
                 href: "javascript:;",
                 target: null,
-                callBack: null
+                callBack: (data={}) => {console.log('data roster')}
             }
         }
     },
@@ -75,15 +75,63 @@ export const menuConfig = {
                         permission: true,
                         name: 'timecodes',
                         href: "/timecodes",
-                        target: "_blank",
+                        target: "_top",
                         callBack: null
                     },
                     allowances: {
-                        permission: false,
+                        permission: true,
                         name: 'allowances',
                         href: "/allowances",
-                        target: "_blank",
+                        target: "_top",
                         callBack: null
+                    },
+                    nongNo: {
+                        permission: true,
+                        name: 'nongNo',
+                        href: "javascript:;",
+                        target: null,
+                        callBack: (data = {}) => alert('Nong Nờ'),
+
+                        sub: {
+                            EBAs: {
+                                permission: true,
+                                name: 'EBAs',
+                                href: "javascript:;",
+                                target: null,
+                                callBack: null,
+                
+                                sub: {
+                                    rules: {
+                                        permission: true,
+                                        name: 'rules',
+                                        href: "javascript:;",
+                                        target: null,
+                                        callBack: (data={'bbb': 'bbb'}) => console.log('data: ', data)
+                                    },
+                                    timecodes: {
+                                        permission: true,
+                                        name: 'timecodes',
+                                        href: "/timecodes",
+                                        target: "_top",
+                                        callBack: null
+                                    },
+                                    allowances: {
+                                        permission: true,
+                                        name: 'allowances',
+                                        href: "/allowances",
+                                        target: "_top",
+                                        callBack: null
+                                    },
+                                    nongNo: {
+                                        permission: true,
+                                        name: 'nongNo',
+                                        href: "javascript:;",
+                                        target: null,
+                                        callBack: (data = {}) => alert('Nong Nờ')
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
