@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MenuDynRender from './menuDyn';
-import MenuDynRender1 from './menuDyn';
+import { menuConfig } from './menuDyn/menuConfig';
 import "./App.css";
 
 class App extends Component {
@@ -16,8 +16,8 @@ class App extends Component {
     
     return (
       <div className="App">
-        <div style={{bottom: allignBottom, top: allignTop, position: 'absolute'}}>
-          <MenuDynRender />  
+        <div style={{top: 150, position: 'absolute'}}>
+          <MenuDynRender data={menuConfig} />
         </div>
       </div>
     );

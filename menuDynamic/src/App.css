@@ -120,7 +120,7 @@ ul{
 }
 
 .menuDyn > li{
-  max-width: 170px;
+	max-width: 170px;
 }
 
 .menuDyn li.hasSub > a:after{
@@ -141,4 +141,32 @@ ul{
 
 .menuDyn li.active > .sub{
   display: block;
+}
+
+
+
+
+
+.menuDynHeader .menuDyn{
+	width: 230px;
+}
+
+.menuDynHeader .menuDyn > li{
+	max-width: 230px;
+}
+
+.menuDynHeader .menuDyn .sub{
+	width: 215px;
+}
+
+.menuDynHeader .menuDyn > li .sub{
+  right: -215px;
+}
+
+.menuDynHeader .menuDyn > li.curr > a{
+	padding-left: 50px;
+	background-image: url('tick-ico.svg');
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+  background-size: 16px 15px;
 }

@@ -11,14 +11,14 @@ export const menuConfig = {
             organisation1: {
                 permission: true,
                 name: 'organisation1',
-                href: "/organisation",
+                href: "javascript:;",
                 target: null,
                 callBack: (data={}) => {}
             },
             organisation2: {
                 permission: true,
                 name: 'organisation2',
-                href: "/organisation2",
+                href: "javascript:;",
                 target: null,
                 callBack: (data={}) => {}
             }
@@ -44,7 +44,7 @@ export const menuConfig = {
     award: {
         permission: true,
         name: 'award',
-        href: "/award",
+        href: "javascript:;",
         target: "_top",
         callBack: null,
 
@@ -74,64 +74,16 @@ export const menuConfig = {
                     timecodes: {
                         permission: true,
                         name: 'timecodes',
-                        href: "/timecodes",
+                        href: "javascript:;",
                         target: "_top",
                         callBack: null
                     },
                     allowances: {
                         permission: true,
                         name: 'allowances',
-                        href: "/allowances",
+                        href: "javascript:;",
                         target: "_top",
                         callBack: null
-                    },
-                    nongNo: {
-                        permission: true,
-                        name: 'nongNo',
-                        href: "javascript:;",
-                        target: null,
-                        callBack: (data = {}) => alert('Nong Nờ'),
-
-                        sub: {
-                            EBAs: {
-                                permission: true,
-                                name: 'EBAs',
-                                href: "javascript:;",
-                                target: null,
-                                callBack: null,
-                
-                                sub: {
-                                    rules: {
-                                        permission: true,
-                                        name: 'rules',
-                                        href: "javascript:;",
-                                        target: null,
-                                        callBack: (data={'bbb': 'bbb'}) => console.log('data: ', data)
-                                    },
-                                    timecodes: {
-                                        permission: true,
-                                        name: 'timecodes',
-                                        href: "/timecodes",
-                                        target: "_top",
-                                        callBack: null
-                                    },
-                                    allowances: {
-                                        permission: true,
-                                        name: 'allowances',
-                                        href: "/allowances",
-                                        target: "_top",
-                                        callBack: null
-                                    },
-                                    nongNo: {
-                                        permission: true,
-                                        name: 'nongNo',
-                                        href: "javascript:;",
-                                        target: null,
-                                        callBack: (data = {}) => alert('Nong Nờ')
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
